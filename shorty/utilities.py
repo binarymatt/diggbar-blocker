@@ -9,6 +9,7 @@ def id_to_string(number):
     return base_convert(number, BASE10, BASE62)
 
 def base_convert(number,fromradix,toradix):
+    # based on http://code.activestate.com/recipes/111286/
     x=long(0)
     for digit in str(number):
        x = x*len(fromradix) + fromradix.index(digit)
