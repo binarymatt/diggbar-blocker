@@ -1,7 +1,0 @@
-{% for url in urls %}
-	{{url.id}} - {{url.url}} - <a href="{%url redirect-to key=url.translate %}">{%url redirect-to key=url.translate %}</a><br />
-{%endfor%}
-<form action="{%url make-new %}" method="POST">
-{{ form.as_p }}
-<input type="submit" value="Submit" />
-</form>
